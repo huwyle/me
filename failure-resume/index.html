@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hugo Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://huwyle.github.io/me/style.css">
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://huwyle.github.io/me">Home</a></h1>
+    <nav>
+      <a href="https://github.com/huwyle">GitHub</a>
+      <a href="https://huwyle.github.io/me/blog">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    
+<h1 class="title">
+  Failure Resume
+</h1>
+<p class="subtitle">
+  Published <strong>2025-10-07</strong>.
+  Last updated <strong>2025-10-26</strong>.
+</p>
+<p>I got the idea for this from <a rel="external" href="https://tanaybiradar.com/blog/failure-resume/">Tanay Biradar</a> who got it from <a rel="external" href="https://jzhao.xyz/posts/a-failure-resume">Jacky Zhao</a>.</p>
+<p>2025</p>
+<ul>
+<li>Did research with a professor, decided that I wasn't a good fit and left the team after only two months</li>
+<li>Rejected for the second time to be a summer camp instructor</li>
+</ul>
+
+
+  </main>
+
+  <footer>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('sidenotes');
+      const markers = document.querySelectorAll('.sn-marker');
+      console.log(markers);
+
+      markers.forEach(marker => {
+        const id = marker.dataset.snId;
+        const text = marker.dataset.snText;
+        console.log(marker.dataset);
+
+        const sidenote = document.createElement('div');
+        sidenote.className = 'sn-content';
+        // sidenote.id = `sn-${id}`;
+        sidenote.innerHTML = `<sup style="margin-right: 6px;">${id}.</sup>${text}`;
+
+        marker.insertAdjacentElement('afterend', sidenote);
+      });
+    });
+  </script>
+
+  
+</body>
+
+</html>
