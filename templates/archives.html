@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
-{% import "macros.html" as macros %}
-
 {% block content %}
-  {{ macros::list_pages(pages=section.pages) }}
+<ul>
+  {% for page in section.pages %}
+  <li>
+    <a class="blog-link" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    ({{ page.date }}): {{ page.description }}
+  </li>
+  {% endfor %}
+</ul>
 {% endblock content %}
